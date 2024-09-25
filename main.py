@@ -3,9 +3,11 @@ from turtle import *
 # number cube 1 
 # speed(10000000000)
 tracer(0,0)
-Y=5 
+Y=5
 pencolor("yellow")
 
+def justin():
+    print("hello Naveen")
 
 def draw_block():
     for _ in range(4):
@@ -132,6 +134,19 @@ left(90)
 forward(50)
 right(180)
 draw_block()
+print("hello Naveen")
+#Draws a 5 point star 
+penup()
+forward(25)
+pendown()
+forward(25)
+left(70)
+pencolor("black")
+begin_fill()
+for _ in range(5):
+    forward(200)
+    left(144)
+end_fill()
 
 
 
