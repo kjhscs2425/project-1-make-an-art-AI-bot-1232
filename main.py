@@ -4,7 +4,8 @@ from turtle import *
 # speed(10000000000)
 tracer(0,0)
 Y=5
-pencolor("yellow")
+pencolor("black")
+
 
 def justin():
     print("hello Naveen")
@@ -64,7 +65,7 @@ draw_block()
 
 # number cube 4
 # move to where into the middle of the block
-pencolor("red")
+pencolor("black")
 right(90)
 left(90)
 left(90)
@@ -147,6 +148,7 @@ for _ in range(5):
     forward(200)
     left(144)
 end_fill()
+
 
 
 
