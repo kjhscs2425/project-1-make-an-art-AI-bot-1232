@@ -1,158 +1,126 @@
-
 from turtle import *
-# number cube 1 
-# speed(10000000000)
+from math import *
+
+#initial settings
 tracer(0,0)
-Y=5
+
+#two main variables
+length=100   #controls the size of the blocks
+star_size=50 #controls the size of the star
+
 pencolor("black")
 
+#this function draws a block
+def draw_block(block_length):
 
-def justin():
-    print("hello Naveen")
+    offset=block_length/2
+    angle=45
+    hyp=sqrt(offset*offset+offset*offset) #hypothenuse
 
-def draw_block():
+    pendown()
+
+    #draw a square
     for _ in range(4):
-        forward(100)
+        forward(block_length)
         right(90)
+    
+    #move pen into position to draw second square offset
     penup()
     right(90)
-    forward(50)
+    forward(block_length/2)
     left(90)
-    forward(50)
+    forward(block_length/2)
+
+    #draw second square
     pendown()
     left(90)
-    forward(100)
+    forward(block_length)
     for _ in range(4):
         right(90)
-        forward(100)
+        forward(block_length)
 
-    right(180)
-    forward(100)
-    right(45)
-    forward(72)
+    right(225)
+    forward(hyp)
+    right(225)
+    forward(block_length)
+    left(45)
+    forward(hyp)
     right(135)
-    forward(101)
+    forward(block_length)
     right(45)
-    forward(70)
+    forward(hyp)
     right(45)
-    forward(100)
-    right(90) 
-    forward(100)
-    right(45)
-    forward(70)
-    right(45)
-    forward(100)
+    forward(block_length)
+    right(135)
+    forward(hyp)
     right(180)
-    forward(100)
-    left(90)
-    forward(100)
-    right(45)
-    forward(70)
-    # move back to start position
-    backward(70)
-    right(45)
-    backward(100)
+    forward(hyp)
+    right(135)
+    forward(block_length)
+    right(90)
 
-draw_block()
-# number cube 2
-# move to where next block starts
-forward(100)
-draw_block()
+    penup()
+#end of function draw_block
 
-# number cube 3 
-backward(200)
-draw_block()
+#function to draw a 5 point star
+def draw_star(size):
+    pendown()
+    left(70)
+    pencolor("black")
+    begin_fill()
+    for _ in range(5):
+        forward(size)
+        left(144)
+    end_fill()
+    right(70)
+    penup()
 
-# number cube 4
-# move to where into the middle of the block
-pencolor("black")
+
+#main code
+#draw frist block of base
+draw_block(length)
+forward (length)
+
+#draw second block of base
+draw_block(length)
+left(180)
+
+#draw third block of base
+forward(2*length)
+left(180)
+draw_block(length)
+
+#move turtle to the second level
+left(90)
+forward(length)
 right(90)
-left(90)
-left(90)
-backward(100)
-forward(100)
-right(90)
-forward(100)
-left(90)
-left(90)
-forward(50)
-right(90)
-penup()
-forward(50)
-right(90)
-forward(50)
-left(90)
-right(90)
-# move to wehre into the middle of the block 
-penup()
-forward(100)
-left(90)
-left(90)
-forward(-Y)
-draw_block()
-right(90)
-forward(100)
-right(90)
-left(45+180)
-forward(73)
-left(45)
-left(90)
-draw_block()
-# penup()
-# forward(2)
-# penup()
-# right(90)
-# forward(100)
-# left(90)
-# forward(50)
-# right(270)
-# right(90)
-# penup()
-# right(900+90)
-# right(180)
-# forward(100)
-# right(270)
-# left(90)
-# right(180)
-# forward(100)
-# right(90)
-# forward(50)
-# right(90)
-# forward(100)
-# forward(50)
-# left(90)
-# forward(10)
-# right(90)
-# right(90)
-# left(90)
-# forward(100)
-# cube number 6
-pencolor("black")
-left(90)
-penup()
-forward(100)
-left(90)
-forward(50)
-right(180)
-draw_block()
-print("hello Naveen")
-#Draws a 5 point star 
-penup()
-forward(25)
-pendown()
-forward(25)
-left(70)
-pencolor("black")
-begin_fill()
-for _ in range(5):
-    forward(200)
-    left(144)
-end_fill()
+forward(length/2)
 
+#draw first block of second level
+draw_block(length)
 
+#draw second block of second level
+forward(length)
+draw_block(length)
 
+#move turtle to the third level
+left(90)
+forward(length)
+right(90)
+forward(length/2)
+left(180)
+forward(length)
+left(180)
+#draw block on third level
+draw_block(length)
 
-
+#draw stars on top
+draw_star(star_size/2)
+forward(length/2)
+draw_star(star_size)
+forward(length/2)
+draw_star(star_size/2)
 
 update()
+
 exitonclick()
