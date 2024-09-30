@@ -5,8 +5,8 @@ from math import *
 tracer(0,0)
 
 #two main variables
-length=100   #controls the size of the blocks
-star_size=50 #controls the size of the star
+length=100  #controls the size of the blocks
+star_size=200 #controls the size of the star
 
 pencolor("black")
 
@@ -120,7 +120,11 @@ forward(length/2)
 draw_star(star_size)
 forward(length/2)
 draw_star(star_size/2)
+write("I finished the Homework assigment"), 
 
+#get rid of cursor
+penup()
+forward(10000)
 update()
 
 exitonclick()
