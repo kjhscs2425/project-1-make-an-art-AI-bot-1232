@@ -2,7 +2,7 @@ Overall Rough Draft Score: 27 / 30
 
 * [ 10 / 10 ] Working code
 
-* [ 10 / 1 ] A variable
+* [ 1 / 1 ] A variable
 * [ 0.5 / 1 ] A comment next to the variable saying what values it can take
 * [ 1 / 1 ] Changing the variable changes the picture
 * [ 1 / 1 ] Another variable
