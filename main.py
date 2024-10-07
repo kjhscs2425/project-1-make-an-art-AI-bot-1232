@@ -5,8 +5,11 @@ from math import *
 tracer(0,0)
 
 #two main variables
-length=100  #controls the size of the blocks
-star_size=200 #controls the size of the star
+#length controls the size of the blocks, values can be any positive integer
+length=int(textinput("Cubelength","Enter length of cube:"))
+#star size controls the size of the star, values can be any positive integer
+star_size=int(textinput("Starsize","Enter size of stars:"))
+
 
 pencolor("black")
 
@@ -35,7 +38,7 @@ def draw_block(block_length):
     pendown()
     left(90)
     forward(block_length)
-    for _ in range(4):
+    for i in range(4):
         right(90)
         forward(block_length)
 
@@ -64,15 +67,16 @@ def draw_block(block_length):
 
 #function to draw a 5 point star
 def draw_star(size):
+    
     pendown()
-    left(70)
+    left(72)
     pencolor("black")
     begin_fill()
-    for _ in range(5):
+    for i in range (5):
         forward(size)
         left(144)
     end_fill()
-    right(70)
+    right(72)
     penup()
 
 
@@ -114,12 +118,12 @@ left(180)
 #draw block on third level
 draw_block(length)
 
-#draw stars on top
-draw_star(star_size/2)
-forward(length/2)
-draw_star(star_size)
-forward(length/2)
-draw_star(star_size/2)
+#draw 3 stars on top
+#loop where the loop variable changes something in the design
+#i=1 draws a big star, i=2 draws a small star
+for i in (2,1,2):
+    draw_star(star_size/i)
+    forward(length/2)
 write("I FINISHED MY HOMEWORK =)")
 
 #get rid of cursor
