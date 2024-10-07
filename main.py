@@ -120,7 +120,7 @@ forward(length/2)
 draw_star(star_size)
 forward(length/2)
 draw_star(star_size/2)
-write("I finished the Homework assigment"), 
+write("I FINISHED MY HOMEWORK =)")
 
 #get rid of cursor
 penup()
