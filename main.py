@@ -11,6 +11,7 @@ length=int(textinput("Cubelength","Enter length of cube:"))
 star_size=int(textinput("Starsize","Enter size of stars:"))
 
 
+
 pencolor("black")
 
 #this function draws a block
@@ -130,5 +131,10 @@ write("I FINISHED MY HOMEWORK =)")
 penup()
 forward(10000)
 update()
+
+
+
+
+
 
 exitonclick()
